@@ -2,6 +2,8 @@ import Head from "next/head";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 const name = "Shohei Mizuno";
 export const siteTitle = "Portfolio";
@@ -24,6 +26,9 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+
+      <Header />
+
       <header className={styles.header}>
         {home ? (
           <>
@@ -36,7 +41,7 @@ export default function Layout({ children, home }) {
           </>
         ) : (
           <>
-            <Link href="/">
+            {/* <Link href="/">
               <a>
                 <img
                   src="/images/profile.png"
@@ -44,12 +49,12 @@ export default function Layout({ children, home }) {
                   alt={name}
                 />
               </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
+            </Link> */}
+            {/* <h2 className={utilStyles.headingLg}>
               <Link href="/">
                 <a className={utilStyles.colorInherit}>{name}</a>
               </Link>
-            </h2>
+            </h2> */}
           </>
         )}
       </header>
@@ -61,6 +66,9 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
+
+      <Footer />
+
     </div>
   );
 }
