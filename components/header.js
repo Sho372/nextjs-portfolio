@@ -6,7 +6,8 @@ export default function Header() {
       <Menu />
       <style jsx>{`
         .header-wrapper {
-          padding: 30px;
+          margin: 1rem;
+          padding: 3px;
           display: flex;
           justify-content: space-between;
           align-items: center;

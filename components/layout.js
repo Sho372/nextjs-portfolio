@@ -27,9 +27,9 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <Header />
 
       <header className={styles.header}>
+        <Header />
         {home ? (
           <>
             <img
@@ -41,7 +41,7 @@ export default function Layout({ children, home }) {
           </>
         ) : (
           <>
-            {/* <Link href="/">
+            <Link href="/">
               <a>
                 <img
                   src="/images/profile.png"
@@ -49,12 +49,12 @@ export default function Layout({ children, home }) {
                   alt={name}
                 />
               </a>
-            </Link> */}
-            {/* <h2 className={utilStyles.headingLg}>
+            </Link>
+            <h2 className={utilStyles.headingLg}>
               <Link href="/">
                 <a className={utilStyles.colorInherit}>{name}</a>
               </Link>
-            </h2> */}
+            </h2>
           </>
         )}
       </header>
@@ -66,9 +66,7 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
-
       <Footer />
-
     </div>
   );
 }
