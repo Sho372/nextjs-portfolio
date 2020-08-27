@@ -1,9 +1,9 @@
 import Layout from "../components/layout";
 
-export default function Blog() {
+export default function About() {
   return (
     <Layout>
-      <h1>To-Do List</h1>
+      <h1>About me</h1>
     </Layout>
   );
 }
