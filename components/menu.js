@@ -9,13 +9,18 @@ export default function Menu() {
         </Link>
       </li>
       <li>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+      </li>
+      <li>
         <Link href="/blog">
           <a>Blog</a>
         </Link>
       </li>
       <li>
         <Link href="/todo">
-          <a>Todo</a>
+          <a>To-Do</a>
         </Link>
       </li>
       <li>
