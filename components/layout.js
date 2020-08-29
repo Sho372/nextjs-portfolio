@@ -6,7 +6,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 
 const name = "Shohei Mizuno";
-export const siteTitle = "Portfolio";
+export const siteTitle = "Portfolio | Shohei Mizuno";
 
 export default function Layout({ children, home }) {
   return (
@@ -59,13 +59,13 @@ export default function Layout({ children, home }) {
         )}
       </header>
       <main>{children}</main>
-      {!home && (
+      {/* {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
             <a>← Back to home</a>
           </Link>
         </div>
-      )}
+      )} */}
       <Footer />
     </div>
   );
