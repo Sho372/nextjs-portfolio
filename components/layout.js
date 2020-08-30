@@ -7,6 +7,14 @@ import Footer from "../components/footer";
 
 const name = "Shohei Mizuno";
 export const siteTitle = "Portfolio | Shohei Mizuno";
+export const Divider = ({ color }) => (
+  <hr
+    style={{
+      color: color,
+      height: 1,
+    }}
+  ></hr>
+);
 
 export default function Layout({ children, home }) {
   return (
@@ -27,7 +35,6 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-
       <header className={styles.header}>
         <Header />
         {home ? (
@@ -38,6 +45,10 @@ export default function Layout({ children, home }) {
               alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <ul className={styles.info}>
+              <li>Japanese male</li>
+              <li>Vancouver, BC</li>
+            </ul>
           </>
         ) : (
           <>

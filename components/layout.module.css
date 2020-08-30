@@ -26,6 +26,42 @@
   margin: 3rem 0 0;
 }
 
+.titleHeader {
+  margin: 4rem 0 0 0;
+  font-size: 28px;
+  color: #111;
+  font-weight: 300;
+}
+
+.skillsHeader {
+  margin: 0;
+  font-size: 18px;
+  color: #111;
+  font-weight: 300;
+}
+
+.skillsContainer {
+  width: max-content;
+  margin: 0rem 1rem 6rem;
+}
+
+.skillsColmuns {
+  width: max-content;
+  float: left;
+  margin-right: 5rem;
+}
+
+.clearFloat {
+  clear: both;
+}
+
+.info {
+  margin: 0 0 50px 0;
+  padding: 0;
+  font-size: 18px;
+  list-style: none;
+}
+
 /* .h1Title {
   text-align: center;
 } */
