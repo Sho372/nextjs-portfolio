@@ -16,13 +16,14 @@ export default function About() {
       <h3 className={styles.skillsHeader}>Programming Language</h3>
       <div className={styles.skillsContainer}>
         <div className={styles.skillsColmuns}>
-          <li>Java</li>
+          <li>Golang</li>
+          <li>Java (Spring Boot)</li>
           <li>PHP</li>
-          <li>JavaScript(ES6)</li>
         </div>
         <div className={styles.skillsColmuns}>
+          <li>JavaScript (ES6, React, Next.js)</li>
           <li>Shell script</li>
-          <li>Python(JupyterLab)</li>
+          <li>Python</li>
         </div>
       </div>
       <h3 className={styles.skillsHeader}>Cloud</h3>
