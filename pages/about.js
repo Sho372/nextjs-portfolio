@@ -10,7 +10,7 @@ export default function About() {
       </Head>
       <h1 className={styles.titleHeader}>About Me</h1>
       <Divider color="black" />
-      <p>Hi, I'm Shohei. I'm software enginer.</p>
+      <p>Hi, I'm Shohei. I'm a software enginer.</p>
       <h1 className={styles.titleHeader}>Skills</h1>
       <Divider color="black" />
       <h3 className={styles.skillsHeader}>Programming Language</h3>
