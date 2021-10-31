@@ -3,6 +3,22 @@ title: 'My VSCode Settings'
 date: '2021-08-15'
 ---
 
+- [設定同期](#設定同期)
+- [ショートカット](#ショートカット)
+  - [設定](#設定)
+    - [デフォルト](#デフォルト)
+    - [ユーザー定義](#ユーザー定義)
+    - [基本ムーブ](#基本ムーブ)
+- [Settings](#settings)
+    - [Theme](#theme)
+    - [Vim emulator](#vim-emulator)
+    - [Font](#font)
+    - [UI](#ui)
+- [Extensions](#extensions)
+  - [JS](#js)
+  - [Markdown](#markdown)
+- [Debug](#debug)
+
 メインエディタをVimからVScodeにしようかなと思ったのでメモ書き
 
 - VSCodeの設定同期がGithubアカウントでできるの楽すぎる。個人PCと会社PCがすぐに同期できるのありがたすぎる。環境に少しでも違いがあると気になるのでこれが個人的に重要。Vimも.vimrcをGithubで管理して同期させてるけど、こっちのほうが断然楽
@@ -18,6 +34,12 @@ date: '2021-08-15'
 
 # ショートカット
 
+## 設定
+
+- `alt + s + alt + p`でショートカット設定を開いて設定
+- 被っているショートカットの検索は、検索窓の `recorded keys` に切り替えてショートカットで検索。
+  - これでvimコマンドと被っているコマンドも確認できる
+
 ### デフォルト
 
 1. User settings： `Ctrl + ,`  `Command + ,`
@@ -25,26 +47,31 @@ date: '2021-08-15'
 
 その他のデフォルトのショートカット
 
-
 * [Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 * [macOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
 
 ### ユーザー定義
 
-1. Terminalトグル: `F9`
+|項目   |説明   | プラグイン名    | ショートカット  |
+|---|---|-----|--|
+|ショートカット設定 |ショートカットのキーを順番にササっと入力すれば大丈夫。そこまでシビアな入力判定ではない。vimのキーバインディングだとデフォルトのショートカット使えないので変えておく | vscode本体 |`alt + s + alt + o`|
+| Terminalトグル | Terminal開いていない時は新規に開いてくれる  | vscode本体    | `F9`   |
+|新規Terminal |新規Terminalを開く |vscode本体| `shift + F9`|
+|Markdown preview ehnancedのプレビュー開く | |Markdown preview ehnanced |`alt + p` |
+|Markdownのテーブル挿入 | |Markdown preview ehnanced | `alt + p`|
 
-    Terminal開いていない時は新規に開いてくれる
+### 基本ムーブ
 
-1. 新規Terminal: `shift + F9`
-1. Markdown preview ehnancedのプレビュー開く: `alt + p`
-1. ショートカット設定： `alt + k r` ※ alt + k同時押しの後にr
-    vimのキーバインディングだとデフォルトのショートカット使えないので変えておく
+1. コマンドパレットを開く
+2. やりたいことを入力してみる
+3. 出てきたコマンドでの設定ボタンでショートカットが設定されていなかったら設定する
 
 # Settings
 
 ### Theme
 
-[GitHub - sdras/night-owl-vscode-theme: 🌌 NIGHT OWL: A VS Code dark theme for contrast for nighttime coding, 🦉 LIGHT OWL: a daytime light theme](https://github.com/sdras/night-owl-vscode-theme)
+Darcula Theme
+https://marketplace.visualstudio.com/items?itemName=rokoroku.vscode-theme-darcula
 
 ### Vim emulator
 
@@ -61,6 +88,16 @@ Fira code
 インストールと各種エディターでの設定方法
 
 [Home · tonsky/FiraCode Wiki](https://github.com/tonsky/FiraCode/wiki)
+
+### UI
+
+- status barをもう少し大きくしたいけど、まだできないらしい。とりあえず色を黒にして白抜き文字を見やすくする
+    - https://github.com/microsoft/vscode/issues/519
+```
+    "workbench.colorCustomizations": {
+        "statusBar.background" : "#0c000b",
+    }
+```
 
 # Extensions
 
@@ -87,9 +124,11 @@ Fira code
 1. Markdown Preview Enhanced
 
     [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
+    - ドキュメント：https://shd101wyy.github.io/markdown-preview-enhanced/#/ja-jp/
+        - グラフ書いてみたい
 
 1. Markdown All in One
-    ボルドとかイタリックとかよくあるショートカット使えるようになるはずだが、Windowsは、デフォルトがctrlを使うのでvimキーバインディングだと使えない。テーブル挿入くらうのために使う
+    ボルドとかイタリックとかよくあるショートカット使えるようになるはずだが、Windowsは、デフォルトがctrlを使うのでvimキーバインディングだと使えない。テーブル挿入くらいのために使う
 
 1. Markdown Emoji    
     VSCodeのMarkdown プレビューに:emoji: syntaxのサポート追加 👍
